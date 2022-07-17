@@ -5,6 +5,7 @@ import LoginPage from '../pages/Login';
 import SignUpPage from '../pages/SignUp';
 import CitiesPage from '../pages/Cities';
 import AddCityPage from '../pages/AddCity';
+import WeatherPage from '../pages/Weather';
 
 const routes = [
    { path: '/', component: HomePage, name: 'home' },
@@ -12,6 +13,7 @@ const routes = [
    { path: '/signup', component: SignUpPage, name: 'signup' },
    { path: '/cities', component: CitiesPage, name: 'cities' },
    { path: '/add-city/:id?', component: AddCityPage, name: 'add-city' },
+   { path: '/weather', component: WeatherPage, name: 'weather' },
 ];
 
 const router = createRouter({

@@ -6,17 +6,22 @@ const store = {
    namespaced: true,
    state: {
       cities: () => [],
+      cityWeather: {},
       loading: false, //індикатор завантаження
       error: false, //індикатор помилки
    },
    getters: {
       cities: (state) => state.cities,
+      cityWeather: (state) => state.cityWeather,
       isLoading: (state) => state.loading,
       isError: (state) => state.error,
    },
    mutations: {
       setCities(state, cities) {
          state.cities = cities;
+      },
+      addWeather(state, weather) {
+         state.cityWeather = weather;
       },
       addCityToList(state, city) {
          state.cities.push(city);
@@ -82,6 +87,29 @@ const store = {
                   () => commit('setLoading', false)
                );
          });
+      },
+
+      addWeatherForCity({ commit }) {
+         commit('setLoading', true);
+         commit('setError', null);
+         axios
+            .get(apiEndpoints.weather.add)
+            .then(
+               //Якщо добре
+               (res) => res.data
+            )
+            .then((resData) => {
+               if (resData.success) commit('addWeather', resData.data);
+               else throw new Error('Fetch failed!');
+            })
+            .catch((err) => {
+               //Якщо погано
+               commit('setError', err);
+            })
+            .finally(
+               //Завжди
+               () => commit('setLoading', false)
+            );
       },
 
       updateCity({ commit }, city) {

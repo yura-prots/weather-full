@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/cities">Список міст</router-link>
       <router-link to="/add-city">Додати місто</router-link>
+      <router-link to="/weather">Додати погоду</router-link>
 
       <router-link v-if="!isAuthenticated()" to="/signup">
         <strong>Sign up</strong>

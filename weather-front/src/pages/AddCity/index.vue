@@ -83,11 +83,11 @@ export default {
       }
     },
 
-    getWeather() {
-      const res = axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${this.cityWeather}&units=metric&appid=${this.APIkey}`
+    async getWeather() {
+      const weather = await axios.get(
+        `http://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/uzhgorod?unitGroup=metric&key=LQEZQG2GTHEH4E8TL3P3MQX95`
       );
-      console.log(res);
+      console.log(weather.data);
     },
   },
 

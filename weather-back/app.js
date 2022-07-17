@@ -12,6 +12,7 @@ require('./db');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./app_api/routes/users');
 var citiesRouter = require('./app_api/routes/cities');
+var weatherRouter = require('./app_api/routes/weather');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cities', citiesRouter);
+app.use('/weather', weatherRouter);
 
 app.use((req, res, next) => {
    const openPaths = ['/cities/login', '/cities/signup'];

@@ -11,4 +11,8 @@ export default {
       signup: `${process.env.VUE_APP_API_URL}/users/signup`,
       login: `${process.env.VUE_APP_API_URL}/users/login`,
    },
+   weather: {
+      add: `${process.env.VUE_APP_W_API_URL}/weather`,
+      readList: `${process.env.VUE_APP_API_URL}/weather`,
+   },
 };

@@ -26,7 +26,6 @@ module.exports.getList = (req, res) => {
 module.exports.add = (req, res, next) => {
    let city = new CityModel({
       name: req.body.name,
-      currentWeather: req.body.currentWeather,
       photo: req.body.photo,
       owner: req.body.owner,
    });
@@ -64,7 +63,6 @@ module.exports.update = (req, res, next) => {
    console.log(req.body);
    let city = {
       name: req.body.name,
-      currentWeather: req.body.currentWeather,
       owner: req.body.owner,
    };
    if (req.body.photo) {
