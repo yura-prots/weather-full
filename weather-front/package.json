@@ -12,11 +12,15 @@
   },
   "main": "index.js",
   "dependencies": {
+    "@mdi/font": "5.9.55",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "roboto-fontface": "*",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuetify": "npm:@vuetify/nightly@next",
+    "vuex": "^4.0.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -30,7 +34,9 @@
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
-    "webpack": "^5.73.0"
+    "vue-cli-plugin-vuetify": "~2.5.1",
+    "webpack": "^5.73.0",
+    "webpack-plugin-vuetify": "^2.0.0-alpha.0"
   },
   "_id": "weather-front@1.0.0",
   "license": "ISC",
