@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // Створення схеми моделі
 const cityScheme = new Schema({
-   name: String,
+   name: Object,
    photo: String,
    owner: {
       type: Schema.Types.ObjectId,

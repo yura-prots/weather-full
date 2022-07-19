@@ -6,15 +6,15 @@ import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
 
 export default createVuetify({
-   defaults: {
-      global: {
-         ripple: false,
-      },
-      VSheet: {
-         elevation: 4,
-      },
-   },
+   //  defaults: {
+   //     global: {
+   //        ripple: false,
+   //     },
+   //     VSheet: {
+   //        elevation: 4,
+   //     },
+   //  },
    theme: {
-      defaultTheme: 'dark',
+      defaultTheme: 'light',
    },
 });
