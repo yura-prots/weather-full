@@ -5,7 +5,7 @@ import apiEndpoints from '@/constants/apiEndpoints';
 const store = {
    namespaced: true,
    state: {
-      cities: () => [],
+      cities: () => {},
       cityWeather: {},
       loading: false, //індикатор завантаження
       error: false, //індикатор помилки

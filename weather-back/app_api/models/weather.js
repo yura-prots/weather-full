@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // Створення схеми моделі
 const weatherScheme = new Schema({
-   currentWeather: String,
+   currentWeather: Object,
    owner: {
       type: Schema.Types.ObjectId,
       ref: 'Users',

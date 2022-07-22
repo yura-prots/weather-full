@@ -48,9 +48,6 @@
                 ></router-link>
               </v-list>
             </v-navigation-drawer>
-            <div class="moon">
-              <div></div>
-            </div>
             <v-main style="height: 300px"></v-main>
           </v-layout>
         </v-card>
@@ -91,39 +88,4 @@ export default {
 </script>
 
 <style lang="scss">
-.moon {
-  width: 300px;
-  height: 300px;
-  position: fixed;
-  top: 20%;
-  bottom: 70%;
-  right: 0%;
-  left: 70%;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 50%;
-  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px;
-}
-.moon::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-color: #000;
-  border-radius: 50%;
-  box-shadow: -40px -40px 50px 2px #000 inset;
-}
-.moon > div {
-  width: 200%;
-  height: 100%;
-  animation: spin 40s linear alternate infinite;
-  background: url(@/assets/images/moon.jpg);
-}
-@keyframes spin {
-  to {
-    transform: translate(-50%);
-  }
-}
 </style>
